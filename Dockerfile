@@ -1,11 +1,15 @@
-FROM nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu20.04
+# FROM nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu20.04
+
+FROM python:3.7
 
 # ERROR: Could not build wheels for thinc which use PEP 517 and cannot be installed directly
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    python3-pip \
-    python3-dev \
-    pip install --upgrade pip setuptools wheel
+    python3-pip less && \
+    pip3 install --upgrade pip
+
+RUN pip install booknlp && \
+    python3 -m spacy download en_core_web_sm --break-system-packages
 
 WORKDIR /app
 
