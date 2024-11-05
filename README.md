@@ -213,3 +213,11 @@ BookNLP uses [Spacy](https://spacy.io) for part-of-speech tagging and dependency
 <table><tr><td><img width="250" src="https://www.neh.gov/sites/default/files/inline-files/NEH-Preferred-Seal820.jpg" /></td><td><img width="150" src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" /></td><td>
 BookNLP is supported by the National Endowment for the Humanities (HAA-271654-20) and the National Science Foundation (IIS-1942591).
 </td></tr></table>
+
+# Jim's notes
+
+Running the app:
+
+1. `docker compose up --build`
+2. `docker exec -it <BOOKNLP CONTAINER> bash`
+3. `cd examples && python ./run_booknlp.py`

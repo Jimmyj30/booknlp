@@ -9,4 +9,3 @@ services:
     tty: true        # docker run -t
     volumes:
       - /mnt/wato-drive2/j257jian/repos/booknlp/examples:/app/examples
-    command: /bin/bash
