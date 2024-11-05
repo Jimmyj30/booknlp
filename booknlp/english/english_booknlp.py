@@ -44,7 +44,8 @@ class EnglishBookNLP:
 			if "referential_gender_cats" in model_params:
 				self.gender_cats=model_params["referential_gender_cats"]
 
-			home = str(Path.home())
+			# mount wato-drive2 directory to HOME_DIR if running in docker
+			home = os.getenv("HOME_DIR", "/mnt/wato-drive2/j257jian/")
 			modelPath=os.path.join(home, "booknlp_models")
 			if "model_path"  in model_params:			
 				modelPath=model_params["model_path"]
